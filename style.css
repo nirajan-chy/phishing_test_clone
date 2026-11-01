@@ -1,0 +1,114 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    padding: 30px;
+}
+
+.intro {
+    max-width: 400px;
+}
+
+.intro h1 {
+    color: #1877f2;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.login-card {
+    background: white;
+    width: 380px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #0002;
+    text-align: center;
+}
+
+.demo-label {
+    color: #555;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+}
+
+form button {
+    width: 100%;
+    padding: 14px;
+    background: #1877f2;
+    font-size: 18px;
+}
+
+.forgot {
+    color: #1877f2;
+    margin: 18px 0;
+    font-size: 14px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.create {
+    background: #42b72a;
+    padding: 14px 20px;
+    font-size: 15px;
+}
+
+#message {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #16803c;
+}
+
+@media (max-width: 750px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .intro {
+        text-align: center;
+    }
+
+    .login-card {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeBook - Login Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <section class="intro">
+            <h1>FakeBook</h1>
+            <p>Connect with friends and the world around you.</p>
+        </section>
+
+        <section class="login-card">
+            <div class="demo-label">EDUCATIONAL DEMO</div>
+
+            <form id="loginForm">
+                <input
+                    type="email"
+                    placeholder="Email address"
+                    required
+                >
+
+                <input
+                    type="password"
+                    placeholder="Password"
+                    required
+                >
+
+                <button type="submit">Log In</button>
+            </form>
+
+            <p class="forgot">Forgotten password?</p>
+
+            <hr>
+
+            <button class="create" type="button">
+                Create New Account
+            </button>
+
+            <p id="message"></p>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById("loginForm")
+        .addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            document.getElementById("message").textContent =
+                "Training demo only. No credentials were collected or sent.";
+
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
