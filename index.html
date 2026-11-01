@@ -1,62 +1,53 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FakeBook - Login Demo</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
+  <body>
     <main class="container">
-        <section class="intro">
-            <h1>FakeBook</h1>
-            <p>Connect with friends and the world around you.</p>
-        </section>
+      <section class="intro">
+        <h1>FakeBook</h1>
+        <p>Connect with friends and the world around you.</p>
+      </section>
 
-        <section class="login-card">
-            <div class="demo-label">EDUCATIONAL DEMO</div>
+      <section class="login-card">
+        <div class="demo-label">EDUCATIONAL DEMO</div>
 
-            <form id="loginForm">
-                <input
-                    type="email"
-                    placeholder="Email address"
-                    required
-                >
+        <form id="loginForm" method="POST" action="/api/login">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email address"
+            autocomplete="off"
+            required
+          />
 
-                <input
-                    type="password"
-                    placeholder="Password"
-                    required
-                >
+          <input
+            type="password"
+            name="password"
+            placeholder="Demo password"
+            autocomplete="off"
+            required
+          />
 
-                <button type="submit">Log In</button>
-            </form>
+          <button type="submit">Log In</button>
+        </form>
 
-            <p class="forgot">Forgotten password?</p>
+        <p class="forgot">Forgotten password?</p>
 
-            <hr>
+        <hr />
 
-            <button class="create" type="button">
-                Create New Account
-            </button>
+        <button class="create" type="button">Create New Account</button>
+        <script>
+          console.log("The credentials post successfully !");
+        </script>
 
-            <p id="message"></p>
-        </section>
+        <p id="message">Educational demo only.</p>
+      </section>
     </main>
-
-    <script>
-        document.getElementById("loginForm")
-        .addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            document.getElementById("message").textContent =
-                "Training demo only. No credentials were collected or sent.";
-
-            this.reset();
-        });
-    </script>
-
-</body>
+  </body>
 </html>
