@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="FakeBook is a fictional educational login simulation."
+    />
+    <title>FakeBook | Educational Login Demo</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="intro" aria-labelledby="brand-heading">
+        <p class="eyebrow">LEARN ONLINE SAFETY</p>
+        <h1 id="brand-heading">FakeBook</h1>
+        <p class="tagline">
+          A fictional social network for practicing how to recognize suspicious
+          login pages.
+        </p>
+        <p class="notice">
+          <span aria-hidden="true">ⓘ</span>
+          This is an educational simulation. Never enter a real password.
+        </p>
+      </section>
+
+      <section class="login-card" aria-labelledby="login-heading">
+        <div class="demo-label">EDUCATIONAL DEMO</div>
+        <h2 id="login-heading">Welcome back</h2>
+        <p class="card-copy">Log in to continue to FakeBook.</p>
+
+        <form id="loginForm">
+          <label for="email">Email address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            autocomplete="off"
+            required
+          />
+
+          <label for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Do not use a real password"
+            autocomplete="off"
+            required
+          />
+
+          <button class="login-button" type="submit">Log In</button>
+        </form>
+
+        <p id="message" class="message" role="status" aria-live="polite">
+          Your password is never sent or stored by this demo.
+        </p>
+
+        <a class="forgot-link" href="#forgot-password">Forgot password?</a>
+        <div class="divider" aria-hidden="true"><span>or</span></div>
+        <button class="create-button" type="button">Create new account</button>
+      </section>
+    </main>
+    <footer>FakeBook is fictional and intended for security education only.</footer>
+    <script src="/script.js" defer></script>
+  </body>
+</html>
